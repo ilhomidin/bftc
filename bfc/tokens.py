@@ -15,13 +15,22 @@ class ValueToken(NonValueToken, ABC):
         ...
 
 
-@dataclass(frozen=True)
-class MutateCellValueToken(ValueToken):
-    value: int
-
+class MutateCellValueToken(ValueToken, ABC):
     @property
     def tag(self) -> str:
         return "MutateCellValue"
+
+
+class IncrementCellValueToken(MutateCellValueToken):
+    @property
+    def value(self) -> int:
+        return 1
+
+
+class DecrementCellValueToken(MutateCellValueToken):
+    @property
+    def value(self) -> int:
+        return -1
 
 
 class LoopStartToken(NonValueToken):
@@ -81,4 +90,6 @@ __all__ = [
     "PutCellValueToken",
     "GetCellValueToken",
     "InvalidSyntax",
+    "IncrementCellValueToken",
+    "DecrementCellValueToken",
 ]
