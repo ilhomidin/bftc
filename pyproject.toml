@@ -3,12 +3,11 @@ requires = ["flit_core >=2,<4"]
 build-backend = "flit_core.buildapi"
 
 [tool.flit.metadata]
-module = "bfc"
+module = "bftc"
 author = "Ilxomidin Bakhoraliev"
 author-email = "itilhomidin@yandex.com"
 home-page = "https://github.com/ilhomidin/bfc"
 classifiers = [ "License :: OSI Approved :: MIT License",]
-description-file = "README.md"
 
 [tool.black]
 line-length = 79
