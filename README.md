@@ -1,6 +1,6 @@
 # 🧠 Brainfuck to C transpiler
 
-## Modules:
+## Modules
 
 - `tokens` — contain all tokens
 - `tokenizer` — contain `tokenize` function
