@@ -6,7 +6,7 @@ build-backend = "flit_core.buildapi"
 module = "bftc"
 author = "Ilxomidin Bakhoraliev"
 author-email = "itilhomidin@yandex.com"
-home-page = "https://github.com/ilhomidin/bfc"
+home-page = "https://github.com/ilhomidin/bftc"
 classifiers = [ "License :: OSI Approved :: MIT License",]
 description-file = "README.md"
 
