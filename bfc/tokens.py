@@ -60,6 +60,12 @@ class GetCellValueToken(NonValueToken):
         return "GetCellValue"
 
 
+class InvalidSyntaxToken(NonValueToken):
+    @property
+    def tag(self) -> str:
+        return "InvalidSyntax"
+
+
 Token = Union[NonValueToken, ValueToken]
 
 
@@ -74,4 +80,5 @@ __all__ = [
     "PreviousCellToken",
     "PutCellValueToken",
     "GetCellValueToken",
+    "InvalidSyntax",
 ]
