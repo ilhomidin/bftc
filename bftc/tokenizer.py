@@ -9,7 +9,7 @@ from .tokens import (DecrementCellValueToken, GetCellValueToken,
 def tokenize(char: str) -> Token:
     return match(char,
         "+", IncrementCellValueToken(),
-        "-", DecrementCellValueToken(-1),
+        "-", DecrementCellValueToken(),
         ".", PutCellValueToken(),
         ",", GetCellValueToken(),
         "[", LoopStartToken(),
