@@ -7,6 +7,14 @@ from .tokens import (DecrementCellValueToken, GetCellValueToken,
 
 
 def transpile(token: Token) -> str:
+    """Transpile given token to C
+
+    Args:
+        token (Token): BF token
+
+    Returns:
+        str: C code
+    """
     return match(token,
         NextCellToken, "i++;",
         PreviousCellToken, "i--;",

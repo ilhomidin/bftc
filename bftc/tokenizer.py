@@ -7,6 +7,14 @@ from .tokens import (DecrementCellValueToken, GetCellValueToken,
 
 
 def tokenize(char: str) -> Token:
+    """Tokenize given Brainfuck command
+
+    Args:
+        char (str): Brainfuck command
+
+    Returns:
+        Token: token
+    """
     return match(char,
         "+", IncrementCellValueToken(),
         "-", DecrementCellValueToken(),

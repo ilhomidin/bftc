@@ -15,6 +15,7 @@ int main(int argc, char **argv) {
 
 
 def generate(tokens: list[Token]) -> str:
+    """Generate valid program on C by given tokens"""
     return C_CODE.format("\n".join([transpile(token) for token in tokens]))
 
 
