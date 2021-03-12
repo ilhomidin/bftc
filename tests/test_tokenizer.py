@@ -47,3 +47,9 @@ def test_close_square_bracket_tokenization():
     token = tokenizer.tokenize("]")
 
     assert isinstance(token, tokens.LoopEndToken)
+
+
+def test_invalid_syntax_tokenization():
+    token = tokenizer.tokenize("@")
+
+    assert isinstance(token, tokens.InvalidSyntaxToken)
