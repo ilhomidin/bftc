@@ -13,20 +13,20 @@ with open("code.bf") as bf_source:
 
 ## Modules
 
-- `tokens` — contain all tokens
-- `tokenizer` — contain `tokenize` function
+- `tokens` — contains all tokens
+- `tokenizer` — contains `tokenize` function
 
 ```python
 def tokenize(char: str) -> Token: ...
 ```
 
-- `transpiler` — contain `transpile` function
+- `transpiler` — contains `transpile` function
 
 ```python
 def transpile(token: Token) -> str: ...
 ```
 
-- `code_generator` — contain `generate` function that generate valid C code from given tokens
+- `code_generator` — contains `generate` function that generate valid C code from given tokens
 
 ```python
 def generate(list[Token]) -> str: ...
@@ -34,5 +34,5 @@ def generate(list[Token]) -> str: ...
 
 ## Install
 ```bash
-pip install bftc
+pip install bftc pampy
 ```
